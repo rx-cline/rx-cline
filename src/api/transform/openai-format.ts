@@ -146,6 +146,7 @@ export function convertToOpenAiMessages(
 			}
 		}
 	}
+
 	return openAiMessages
 }
 
