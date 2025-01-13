@@ -74,7 +74,7 @@ const CodeAccordian = ({
 									textOverflow: "ellipsis",
 									marginRight: "8px",
 								}}>
-								{isFeedback ? "User Edits" : "Console Logs"}
+								{isFeedback ? "用户编辑" : "控制台日志"}
 							</span>
 						</div>
 					) : (

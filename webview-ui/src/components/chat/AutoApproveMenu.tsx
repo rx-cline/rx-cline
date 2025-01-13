@@ -17,35 +17,34 @@ const ACTION_METADATA: {
 }[] = [
 	{
 		id: "readFiles",
-		label: "Read files and directories",
-		shortName: "Read",
-		description: "Allows access to read any file on your computer.",
+		label: "读取文件和目录",
+		shortName: "读取",
+		description: "允许访问并读取计算机上的任何文件。"
 	},
 	{
 		id: "editFiles",
-		label: "Edit files",
-		shortName: "Edit",
-		description: "Allows modification of any files on your computer.",
+		label: "编辑文件",
+		shortName: "编辑",
+		description: "允许修改计算机上的任何文件。"
 	},
 	{
 		id: "executeCommands",
-		label: "Execute safe commands",
-		shortName: "Commands",
-		description:
-			"Allows execution of safe terminal commands. If the model determines a command is potentially destructive, it will still require approval.",
+		label: "执行安全命令",
+		shortName: "命令",
+		description: "允许执行安全的终端命令。如果模型判断某个命令可能具有破坏性，仍然需要批准。"
 	},
 	{
 		id: "useBrowser",
-		label: "Use the browser",
-		shortName: "Browser",
-		description: "Allows ability to launch and interact with any website in a headless browser.",
+		label: "使用浏览器",
+		shortName: "浏览器",
+		description: "允许启动并与任何网站在无头浏览器中进行交互。"
 	},
 	{
 		id: "useMcp",
-		label: "Use MCP servers",
+		label: "使用 MCP 服务器",
 		shortName: "MCP",
-		description: "Allows use of configured MCP servers which may modify filesystem or interact with APIs.",
-	},
+		description: "允许使用已配置的 MCP 服务器，这些服务器可能会修改文件系统或与 APIs 交互。"
+	}
 ]
 
 const AutoApproveMenu = ({ style }: AutoApproveMenuProps) => {
@@ -189,7 +188,7 @@ const AutoApproveMenu = ({ style }: AutoApproveMenuProps) => {
 							color: "var(--vscode-foreground)",
 							whiteSpace: "nowrap",
 						}}>
-						Auto-approve:
+						自动批准：
 					</span>
 					<span
 						style={{
@@ -216,8 +215,7 @@ const AutoApproveMenu = ({ style }: AutoApproveMenuProps) => {
 							color: "var(--vscode-descriptionForeground)",
 							fontSize: "12px",
 						}}>
-						Auto-approve allows Cline to perform the following actions without asking for permission. Please use with
-						caution and only enable if you understand the risks.
+						自动批准允许 Rx-Cline 在不请求许可的情况下执行以下操作。请谨慎使用，并仅在理解风险的情况下启用。
 					</div>
 					{ACTION_METADATA.map((action) => (
 						<div key={action.id} style={{ margin: "6px 0" }}>

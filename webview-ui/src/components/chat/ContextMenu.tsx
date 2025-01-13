@@ -47,11 +47,11 @@ const ContextMenu: React.FC<ContextMenuProps> = ({
 	const renderOptionContent = (option: ContextMenuQueryItem) => {
 		switch (option.type) {
 			case ContextMenuOptionType.Problems:
-				return <span>Problems</span>
+				return <span>问题</span>
 			case ContextMenuOptionType.URL:
-				return <span>Paste URL to fetch contents</span>
+				return <span>粘贴URL以获取内容</span>
 			case ContextMenuOptionType.NoResults:
-				return <span>No results found</span>
+				return <span>未找到结果</span>
 			case ContextMenuOptionType.File:
 			case ContextMenuOptionType.Folder:
 				if (option.value) {
@@ -72,7 +72,7 @@ const ContextMenu: React.FC<ContextMenuProps> = ({
 						</>
 					)
 				} else {
-					return <span>Add {option.type === ContextMenuOptionType.File ? "File" : "Folder"}</span>
+					return <span>添加 {option.type === ContextMenuOptionType.File ? "文件" : "文件夹"}</span>
 				}
 		}
 	}

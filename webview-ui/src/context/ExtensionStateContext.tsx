@@ -59,6 +59,7 @@ export const ExtensionStateContextProvider: React.FC<{
 							config.geminiApiKey,
 							config.openAiNativeApiKey,
 							config.deepSeekApiKey,
+							config.yiApiKey,
 						].some((key) => key !== undefined)
 					: false
 				setShowWelcome(!hasKey)
@@ -141,7 +142,7 @@ export const ExtensionStateContextProvider: React.FC<{
 export const useExtensionState = () => {
 	const context = useContext(ExtensionStateContext)
 	if (context === undefined) {
-		throw new Error("useExtensionState must be used within an ExtensionStateContextProvider")
+		throw new Error("useExtensionState 必须在 ExtensionStateContextProvider 内部使用")
 	}
 	return context
 }

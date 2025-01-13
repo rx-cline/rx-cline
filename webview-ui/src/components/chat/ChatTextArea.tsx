@@ -336,7 +336,7 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 							const reader = new FileReader()
 							reader.onloadend = () => {
 								if (reader.error) {
-									console.error("Error reading file:", reader.error)
+									console.error("读取文件错误：", reader.error)
 									resolve(null)
 								} else {
 									const result = reader.result
@@ -352,7 +352,7 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 					if (dataUrls.length > 0) {
 						setSelectedImages((prevImages) => [...prevImages, ...dataUrls].slice(0, MAX_IMAGES_PER_MESSAGE))
 					} else {
-						console.warn("No valid images were processed")
+						console.warn("没有处理有效的图像")
 					}
 				}
 			},

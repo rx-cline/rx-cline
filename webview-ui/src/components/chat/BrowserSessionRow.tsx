@@ -250,7 +250,7 @@ const BrowserSessionRow = memo((props: BrowserSessionRowProps) => {
 						}}></span>
 				)}
 				<span style={{ fontWeight: "bold" }}>
-					<>{isAutoApproved ? "Cline is using the browser:" : "Cline wants to use the browser:"}</>
+					<>{isAutoApproved ? "Rx-Cline 正在使用浏览器:" : "Rx-Cline 想要使用浏览器:"}</>
 				</span>
 			</div>
 			<div
@@ -506,17 +506,17 @@ const BrowserActionBox = ({ action, coordinate, text }: { action: BrowserAction;
 	const getBrowserActionText = (action: BrowserAction, coordinate?: string, text?: string) => {
 		switch (action) {
 			case "launch":
-				return `Launch browser at ${text}`
+				return `启动浏览器，网址：${text}`
 			case "click":
-				return `Click (${coordinate?.replace(",", ", ")})`
+				return `点击（${coordinate?.replace(",", ", ")}）`
 			case "type":
-				return `Type "${text}"`
+				return `输入 "${text}"`
 			case "scroll_down":
-				return "Scroll down"
+				return "向下滚动"
 			case "scroll_up":
-				return "Scroll up"
+				return "向上滚动"
 			case "close":
-				return "Close browser"
+				return "关闭浏览器"
 			default:
 				return action
 		}
