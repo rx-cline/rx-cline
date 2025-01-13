@@ -73,8 +73,8 @@ const SettingsView = ({ onDone }: SettingsViewProps) => {
 					marginBottom: "17px",
 					paddingRight: 17,
 				}}>
-				<h3 style={{ color: "var(--vscode-foreground)", margin: 0 }}>Settings</h3>
-				<VSCodeButton onClick={handleSubmit}>Done</VSCodeButton>
+				<h3 style={{ color: "var(--vscode-foreground)", margin: 0 }}>设置</h3>
+				<VSCodeButton onClick={handleSubmit}>完成</VSCodeButton>
 			</div>
 			<div
 				style={{
@@ -99,7 +99,7 @@ const SettingsView = ({ onDone }: SettingsViewProps) => {
 						rows={4}
 						placeholder={'e.g. "Run unit tests at the end", "Use TypeScript with async/await", "Speak in Spanish"'}
 						onInput={(e: any) => setCustomInstructions(e.target?.value ?? "")}>
-						<span style={{ fontWeight: "500" }}>Custom Instructions</span>
+						<span style={{ fontWeight: "500" }}>自定义指令</span>
 					</VSCodeTextArea>
 					<p
 						style={{
@@ -107,7 +107,7 @@ const SettingsView = ({ onDone }: SettingsViewProps) => {
 							marginTop: "5px",
 							color: "var(--vscode-descriptionForeground)",
 						}}>
-						These instructions are added to the end of the system prompt sent with every request.
+						这些指令会被添加到每个请求发送的系统提示的末尾。
 					</p>
 				</div>
 
@@ -115,7 +115,7 @@ const SettingsView = ({ onDone }: SettingsViewProps) => {
 					<>
 						<div style={{ marginTop: "10px", marginBottom: "4px" }}>Debug</div>
 						<VSCodeButton onClick={handleResetState} style={{ marginTop: "5px", width: "auto" }}>
-							Reset State
+							重置状态存储
 						</VSCodeButton>
 						<p
 							style={{
@@ -123,7 +123,7 @@ const SettingsView = ({ onDone }: SettingsViewProps) => {
 								marginTop: "5px",
 								color: "var(--vscode-descriptionForeground)",
 							}}>
-							This will reset all global state and secret storage in the extension.
+							这将重置扩展中的所有全局状态和密钥存储。
 						</p>
 					</>
 				)}
@@ -143,9 +143,9 @@ const SettingsView = ({ onDone }: SettingsViewProps) => {
 							margin: 0,
 							padding: 0,
 						}}>
-						If you have any questions or feedback, feel free to open an issue at{" "}
-						<VSCodeLink href="https://github.com/cline/cline" style={{ display: "inline" }}>
-							https://github.com/cline/cline
+						如果您有任何问题或反馈，请随时在{" "}提交一个问题。
+						<VSCodeLink href="https://github.com/rx-cline/rx-cline" style={{ display: "inline" }}>
+							https://github.com/rx-cline/rx-cline
 						</VSCodeLink>
 					</p>
 					<p
