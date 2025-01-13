@@ -26,9 +26,7 @@ const Announcement = ({ version, hideAnnouncement }: AnnouncementProps) => {
 			<VSCodeButton appearance="icon" onClick={hideAnnouncement} style={{ position: "absolute", top: "8px", right: "8px" }}>
 				<span className="codicon codicon-close"></span>
 			</VSCodeButton>
-			<h3 style={{ margin: "0 0 8px" }}>
-				在v{minorVersion}版本中新功能
-			</h3>
+			<h3 style={{ margin: "0 0 8px" }}>在v{minorVersion}版本中新功能</h3>
 			<ul style={{ margin: "0 0 8px", paddingLeft: "12px" }}>
 				<li>
 					<b>检查点功能来了！</b>

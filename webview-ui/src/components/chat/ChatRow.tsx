@@ -508,10 +508,11 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 							<span style={{ fontWeight: "bold" }}>
 								{message.type === "ask" ? (
 									<>
-										Rx-Cline 想在此目录中搜索 <code>{tool.regex}</code>：									</>
+										Rx-Cline 想在此目录中搜索 <code>{tool.regex}</code>：{" "}
+									</>
 								) : (
 									<>
-        								Rx-Cline 在此目录中搜索了 <code>{tool.regex}</code>：
+										Rx-Cline 在此目录中搜索了 <code>{tool.regex}</code>：
 									</>
 								)}
 							</span>
@@ -920,9 +921,7 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 										差异编辑失败
 									</span>
 								</div>
-								<div>
-									这通常发生在模型使用的搜索模式在文件中没有匹配项时。正在重试...
-								</div>
+								<div>这通常发生在模型使用的搜索模式在文件中没有匹配项时。正在重试...</div>
 							</div>
 						</>
 					)
@@ -1002,10 +1001,9 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 									</span>
 								</div>
 								<div>
-									Rx-Cline 无法查看命令的输出。请更新 VSCode (
-									<code>CMD/CTRL + Shift + P</code> → "更新") ，并确保您使用的是受支持的 Shell：
-									zsh, bash, fish, or PowerShell (<code>CMD/CTRL + Shift + P</code> → "终端：选择默认配置文件
-									").{" "}
+									Rx-Cline 无法查看命令的输出。请更新 VSCode (<code>CMD/CTRL + Shift + P</code> → "更新")
+									，并确保您使用的是受支持的 Shell： zsh, bash, fish, or PowerShell (
+									<code>CMD/CTRL + Shift + P</code> → "终端：选择默认配置文件 ").{" "}
 									<a
 										href="https://github.com/rx-cline/rx-cline/wiki/Troubleshooting-%E2%80%90-Shell-Integration-Unavailable"
 										style={{

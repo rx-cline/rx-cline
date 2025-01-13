@@ -19,32 +19,32 @@ const ACTION_METADATA: {
 		id: "readFiles",
 		label: "读取文件和目录",
 		shortName: "读取",
-		description: "允许访问并读取计算机上的任何文件。"
+		description: "允许访问并读取计算机上的任何文件。",
 	},
 	{
 		id: "editFiles",
 		label: "编辑文件",
 		shortName: "编辑",
-		description: "允许修改计算机上的任何文件。"
+		description: "允许修改计算机上的任何文件。",
 	},
 	{
 		id: "executeCommands",
 		label: "执行安全命令",
 		shortName: "命令",
-		description: "允许执行安全的终端命令。如果模型判断某个命令可能具有破坏性，仍然需要批准。"
+		description: "允许执行安全的终端命令。如果模型判断某个命令可能具有破坏性，仍然需要批准。",
 	},
 	{
 		id: "useBrowser",
 		label: "使用浏览器",
 		shortName: "浏览器",
-		description: "允许启动并与任何网站在无头浏览器中进行交互。"
+		description: "允许启动并与任何网站在无头浏览器中进行交互。",
 	},
 	{
 		id: "useMcp",
 		label: "使用 MCP 服务器",
 		shortName: "MCP",
-		description: "允许使用已配置的 MCP 服务器，这些服务器可能会修改文件系统或与 APIs 交互。"
-	}
+		description: "允许使用已配置的 MCP 服务器，这些服务器可能会修改文件系统或与 APIs 交互。",
+	},
 ]
 
 const AutoApproveMenu = ({ style }: AutoApproveMenuProps) => {

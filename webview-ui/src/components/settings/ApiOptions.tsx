@@ -423,7 +423,8 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage }: 
 							marginTop: "5px",
 							color: "var(--vscode-descriptionForeground)",
 						}}>
-						通过提供上述密钥或使用默认的 AWS 凭证提供程序（即 ~/.aws/credentials 或环境变量）进行身份验证。这些凭证仅在本地使用，用于通过此扩展程序发起 API 请求。
+						通过提供上述密钥或使用默认的 AWS 凭证提供程序（即 ~/.aws/credentials
+						或环境变量）进行身份验证。这些凭证仅在本地使用，用于通过此扩展程序发起 API 请求。
 					</p>
 				</div>
 			)}

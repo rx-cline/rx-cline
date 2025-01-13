@@ -112,7 +112,8 @@ const HistoryPreview = ({ showHistoryView }: HistoryPreviewProps) => {
 										color: "var(--vscode-descriptionForeground)",
 									}}>
 									<span>
-										输入: ↑{formatLargeNumber(item.tokensIn || 0)} 输出: ↓{formatLargeNumber(item.tokensOut || 0)}
+										输入: ↑{formatLargeNumber(item.tokensIn || 0)} 输出: ↓
+										{formatLargeNumber(item.tokensOut || 0)}
 									</span>
 									{!!item.cacheWrites && (
 										<>

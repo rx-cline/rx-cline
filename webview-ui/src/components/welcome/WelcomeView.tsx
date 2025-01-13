@@ -31,9 +31,7 @@ const WelcomeView = () => {
 				padding: "0 20px",
 			}}>
 			<h2>大家好，我是Rx-cline</h2>
-			<p>
-				你可以使用自动化的完成代码编写工作
-			</p>
+			<p>你可以使用自动化的完成代码编写工作</p>
 
 			<div style={{ marginTop: "10px" }}>
 				<ApiOptions showModelOptions={false} />

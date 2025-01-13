@@ -143,7 +143,7 @@ const SettingsView = ({ onDone }: SettingsViewProps) => {
 							margin: 0,
 							padding: 0,
 						}}>
-						如果您有任何问题或反馈，请随时在{" "}提交一个问题。
+						如果您有任何问题或反馈，请随时在 提交一个问题。
 						<VSCodeLink href="https://github.com/rx-cline/rx-cline" style={{ display: "inline" }}>
 							https://github.com/rx-cline/rx-cline
 						</VSCodeLink>
