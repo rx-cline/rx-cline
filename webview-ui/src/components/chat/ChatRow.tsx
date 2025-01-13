@@ -769,7 +769,7 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 												<br />
 												It seems like you're having Windows PowerShell issues, please see this{" "}
 												<a
-													href="https://github.com/cline/cline/wiki/TroubleShooting-%E2%80%90-%22PowerShell-is-not-recognized-as-an-internal-or-external-command%22"
+													href="https://github.com/rx-cline/rx-cline/wiki/TroubleShooting-%E2%80%90-%22PowerShell-is-not-recognized-as-an-internal-or-external-command%22"
 													style={{
 														color: "inherit",
 														textDecoration: "underline",
@@ -1007,7 +1007,7 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 									zsh, bash, fish, or PowerShell (<code>CMD/CTRL + Shift + P</code> → "终端：选择默认配置文件
 									").{" "}
 									<a
-										href="https://github.com/cline/cline/wiki/Troubleshooting-%E2%80%90-Shell-Integration-Unavailable"
+										href="https://github.com/rx-cline/rx-cline/wiki/Troubleshooting-%E2%80%90-Shell-Integration-Unavailable"
 										style={{
 											color: "inherit",
 											textDecoration: "underline",
