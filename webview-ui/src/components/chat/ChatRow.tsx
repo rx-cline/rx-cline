@@ -186,7 +186,7 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 							}}></span>
 					),
 					<span style={{ color: normalColor, fontWeight: "bold" }}>
-						{message.type === "ask" ? "Cline wants to execute this command:" : "Cline executed this command:"}
+						{message.type === "ask" ? "Cline 想要执行这个命令：" : "Cline 已执行这个命令："}
 					</span>,
 				]
 			case "use_mcp_server":
@@ -205,13 +205,14 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 					<span style={{ color: normalColor, fontWeight: "bold" }}>
 						{message.type === "ask" ? (
 							<>
-								Cline wants to {mcpServerUse.type === "use_mcp_tool" ? "use a tool" : "access a resource"} on the{" "}
-								<code>{mcpServerUse.serverName}</code> MCP server:
+								Rx-Cline 想要在
+								<code>{mcpServerUse.serverName}</code>
+								MCP 服务器上 {mcpServerUse.type === "use_mcp_tool" ? "使用一个工具" : "访问一个资源"}：
 							</>
 						) : (
 							<>
-								Cline {mcpServerUse.type === "use_mcp_tool" ? "used a tool" : "accessed a resource"} on the{" "}
-								<code>{mcpServerUse.serverName}</code> MCP server:
+								Rx-Cline MCP 服务器上<code>{mcpServerUse.serverName}</code>
+								{mcpServerUse.type === "use_mcp_tool" ? "使用一个工具" : "访问一个资源"}：
 							</>
 						)}
 					</span>,
@@ -224,7 +225,7 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 							color: successColor,
 							marginBottom: "-1.5px",
 						}}></span>,
-					<span style={{ color: successColor, fontWeight: "bold" }}>Task Completed</span>,
+					<span style={{ color: successColor, fontWeight: "bold" }}>任务完成</span>,
 				]
 			case "api_req_started":
 				const getIconSpan = (iconName: string, color: string) => (
@@ -266,7 +267,7 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 									color: normalColor,
 									fontWeight: "bold",
 								}}>
-								API Request Cancelled
+								API 请求已取消
 							</span>
 						) : (
 							<span
@@ -274,15 +275,15 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 									color: errorColor,
 									fontWeight: "bold",
 								}}>
-								API Streaming Failed
+								API 流式传输失败
 							</span>
 						)
 					) : cost != null ? (
-						<span style={{ color: normalColor, fontWeight: "bold" }}>API Request</span>
+						<span style={{ color: normalColor, fontWeight: "bold" }}>API 请求发起</span>
 					) : apiRequestFailedMessage ? (
-						<span style={{ color: errorColor, fontWeight: "bold" }}>API Request Failed</span>
+						<span style={{ color: errorColor, fontWeight: "bold" }}>API 请求失败</span>
 					) : (
-						<span style={{ color: normalColor, fontWeight: "bold" }}>API Request...</span>
+						<span style={{ color: normalColor, fontWeight: "bold" }}>API 请求等待中...</span>
 					),
 				]
 			case "followup":
@@ -347,7 +348,7 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 						<div style={headerStyle}>
 							{toolIcon("edit")}
 							<span style={{ fontWeight: "bold" }}>
-								{message.type === "ask" ? "Cline wants to edit this file:" : "Cline is editing this file:"}
+								{message.type === "ask" ? "Rx-Cline想编辑这个文件：" : "Rx-Cline 编辑了这个文件:"}
 							</span>
 						</div>
 						<CodeAccordian
@@ -365,7 +366,7 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 						<div style={headerStyle}>
 							{toolIcon("new-file")}
 							<span style={{ fontWeight: "bold" }}>
-								{message.type === "ask" ? "Cline wants to create a new file:" : "Cline is creating a new file:"}
+								{message.type === "ask" ? "Rx-Cline 想创建一个新文件：" : "RxCline 创建了一个新文件："}
 							</span>
 						</div>
 						<CodeAccordian
@@ -383,7 +384,7 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 						<div style={headerStyle}>
 							{toolIcon("file-code")}
 							<span style={{ fontWeight: "bold" }}>
-								{message.type === "ask" ? "Cline wants to read this file:" : "Cline read this file:"}
+								{message.type === "ask" ? "Rx-Cline 想读取这个文件：" : "Rx-Cline 读取了这个文件："}
 							</span>
 						</div>
 						{/* <CodeAccordian
@@ -447,8 +448,8 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 							{toolIcon("folder-opened")}
 							<span style={{ fontWeight: "bold" }}>
 								{message.type === "ask"
-									? "Cline wants to view the top level files in this directory:"
-									: "Cline viewed the top level files in this directory:"}
+									? "Rx-Cline 想查看此目录中的顶级文件："
+									: "Rx-Cline 查看了此目录中的顶级文件："}
 							</span>
 						</div>
 						<CodeAccordian
@@ -467,8 +468,8 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 							{toolIcon("folder-opened")}
 							<span style={{ fontWeight: "bold" }}>
 								{message.type === "ask"
-									? "Cline wants to recursively view all files in this directory:"
-									: "Cline recursively viewed all files in this directory:"}
+									? "Rx-Cline 想递归查看此目录中的所有文件："
+									: "Rx-Cline 已递归查看此目录中的所有文件："}
 							</span>
 						</div>
 						<CodeAccordian
@@ -487,8 +488,8 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 							{toolIcon("file-code")}
 							<span style={{ fontWeight: "bold" }}>
 								{message.type === "ask"
-									? "Cline wants to view source code definition names used in this directory:"
-									: "Cline viewed source code definition names used in this directory:"}
+									? "Rx-Cline 想递归查看此目录中的所有文件："
+									: "Rx-Cline 递归查看了此目录中的所有文件："}
 							</span>
 						</div>
 						<CodeAccordian
@@ -507,11 +508,10 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 							<span style={{ fontWeight: "bold" }}>
 								{message.type === "ask" ? (
 									<>
-										Cline wants to search this directory for <code>{tool.regex}</code>:
-									</>
+										Rx-Cline 想在此目录中搜索 <code>{tool.regex}</code>：									</>
 								) : (
 									<>
-										Cline searched this directory for <code>{tool.regex}</code>:
+        								Rx-Cline 在此目录中搜索了 <code>{tool.regex}</code>：
 									</>
 								)}
 							</span>
@@ -640,7 +640,7 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 							color: "var(--vscode-editorWarning-foreground)",
 						}}>
 						<i className="codicon codicon-warning"></i>
-						<span>The model has determined this command requires explicit approval.</span>
+						<span>模型已确定此命令需要明确批准。</span>
 					</div>
 				)}
 			</>
@@ -917,12 +917,11 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 											fontWeight: 500,
 											color: "#FFA500",
 										}}>
-										Diff Edit Failed
+										差异编辑失败
 									</span>
 								</div>
 								<div>
-									This usually happens when the model uses search patterns that don't match anything in the
-									file. Retrying...
+									这通常发生在模型使用的搜索模式在文件中没有匹配项时。正在重试...
 								</div>
 							</div>
 						</>
@@ -963,7 +962,7 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 											cursor: seeNewChangesDisabled ? "wait" : "pointer",
 										}}>
 										<i className="codicon codicon-new-file" style={{ marginRight: 6 }} />
-										See new changes
+										查看新更改
 									</SuccessButton>
 								</div>
 							)}
@@ -999,21 +998,21 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 											fontWeight: 500,
 											color: "#FFA500",
 										}}>
-										Shell Integration Unavailable
+										Shell 集成不可用
 									</span>
 								</div>
 								<div>
-									Cline won't be able to view the command's output. Please update VSCode (
-									<code>CMD/CTRL + Shift + P</code> → "Update") and make sure you're using a supported shell:
-									zsh, bash, fish, or PowerShell (<code>CMD/CTRL + Shift + P</code> → "Terminal: Select Default
-									Profile").{" "}
+									Rx-Cline 无法查看命令的输出。请更新 VSCode (
+									<code>CMD/CTRL + Shift + P</code> → "更新") ，并确保您使用的是受支持的 Shell：
+									zsh, bash, fish, or PowerShell (<code>CMD/CTRL + Shift + P</code> → "终端：选择默认配置文件
+									").{" "}
 									<a
 										href="https://github.com/cline/cline/wiki/Troubleshooting-%E2%80%90-Shell-Integration-Unavailable"
 										style={{
 											color: "inherit",
 											textDecoration: "underline",
 										}}>
-										Still having trouble?
+										仍然遇到问题？
 									</a>
 								</div>
 							</div>
@@ -1030,7 +1029,7 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 										fontSize: "12px",
 										textTransform: "uppercase",
 									}}>
-									Response
+									响应
 								</div>
 								<CodeAccordian
 									code={message.text}
@@ -1130,7 +1129,7 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 														cursor: seeNewChangesDisabled ? "wait" : "pointer",
 													}}
 												/>
-												See new changes
+												查看新更改
 											</SuccessButton>
 										</div>
 									)}

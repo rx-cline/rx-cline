@@ -27,12 +27,12 @@ const Announcement = ({ version, hideAnnouncement }: AnnouncementProps) => {
 				<span className="codicon codicon-close"></span>
 			</VSCodeButton>
 			<h3 style={{ margin: "0 0 8px" }}>
-				🎉{"  "}New in v{minorVersion}
+				在v{minorVersion}版本中新功能
 			</h3>
 			<ul style={{ margin: "0 0 8px", paddingLeft: "12px" }}>
 				<li>
-					<b>Checkpoints are here!</b> Cline now saves a snapshot of your workspace at each step of the task. Hover over
-					any message to see two new buttons:
+					<b>检查点功能来了！</b>
+					Rx-Cline 现在会在任务的每个步骤保存你的工作区快照。将鼠标悬停在任何消息上，查看两个新按钮：
 					<ul style={{ margin: "4px 0", paddingLeft: 22 }}>
 						<li>
 							<span
@@ -41,7 +41,7 @@ const Announcement = ({ version, hideAnnouncement }: AnnouncementProps) => {
 									fontSize: "12px",
 									marginRight: "4px",
 								}}></span>
-							<b>Compare</b> shows you a diff between the snapshot and your current workspace
+							<b>比较</b> 显示快照与当前工作区之间的差异
 						</li>
 						<li>
 							<span
@@ -50,18 +50,17 @@ const Announcement = ({ version, hideAnnouncement }: AnnouncementProps) => {
 									fontSize: "12px",
 									marginRight: "4px",
 								}}></span>
-							<b>Restore</b> lets you revert your project's files back to that point in the task
+							<b>恢复</b> 让你将项目的文件还原到任务中的那个点
 						</li>
 					</ul>
 				</li>
 				<li>
-					<b>'See new changes' button</b> when a task is completed, showing you an overview of all the changes Cline
-					made to your workspace throughout the task
+					<b>“查看新更改”按钮</b> 在任务完成时，显示 Rx-Cline 在任务过程中对您的工作区所做的所有更改的概览
 				</li>
 			</ul>
 			<p style={{ margin: "8px 0" }}>
 				<VSCodeLink href="https://x.com/sdrzn/status/1876378124126236949" style={{ display: "inline" }}>
-					See a demo of Checkpoints here!
+					在这里查看 Checkpoints 的演示！
 				</VSCodeLink>
 			</p>
 			{/*<ul style={{ margin: "0 0 8px", paddingLeft: "12px" }}>
@@ -119,13 +118,6 @@ const Announcement = ({ version, hideAnnouncement }: AnnouncementProps) => {
 					margin: "8px 0",
 				}}
 			/>
-			<p style={{ margin: "0" }}>
-				Join
-				<VSCodeLink style={{ display: "inline" }} href="https://discord.gg/cline">
-					discord.gg/cline
-				</VSCodeLink>
-				for more updates!
-			</p>
 		</div>
 	)
 }

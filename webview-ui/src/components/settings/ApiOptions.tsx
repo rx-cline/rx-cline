@@ -109,7 +109,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage }: 
 				value={selectedModelId}
 				onChange={handleInputChange("apiModelId")}
 				style={{ width: "100%" }}>
-				<VSCodeOption value="">Select a model...</VSCodeOption>
+				<VSCodeOption value="">选择模型...</VSCodeOption>
 				{Object.keys(models).map((modelId) => (
 					<VSCodeOption
 						key={modelId}
@@ -162,7 +162,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage }: 
 						style={{ width: "100%" }}
 						type="password"
 						onInput={handleInputChange("apiKey")}
-						placeholder="Enter API Key...">
+						placeholder="输入API的密钥...">
 						<span style={{ fontWeight: 500 }}>Anthropic API Key</span>
 					</VSCodeTextField>
 
@@ -178,7 +178,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage }: 
 								})
 							}
 						}}>
-						Use custom base URL
+						使用定制基准URL
 					</VSCodeCheckbox>
 
 					{anthropicBaseUrlSelected && (
@@ -197,7 +197,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage }: 
 							marginTop: 3,
 							color: "var(--vscode-descriptionForeground)",
 						}}>
-						This key is stored locally and only used to make API requests from this extension.
+						此密钥存储在本地，仅用于从此扩展程序发起API请求。
 						{!apiConfiguration?.apiKey && (
 							<VSCodeLink
 								href="https://console.anthropic.com/settings/keys"
@@ -205,7 +205,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage }: 
 									display: "inline",
 									fontSize: "inherit",
 								}}>
-								You can get an Anthropic API key by signing up here.
+								您可以通过在此注册获取Anthropic API密钥。
 							</VSCodeLink>
 						)}
 					</p>
@@ -219,7 +219,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage }: 
 						style={{ width: "100%" }}
 						type="password"
 						onInput={handleInputChange("openAiNativeApiKey")}
-						placeholder="Enter API Key...">
+						placeholder="输入API的密钥...">
 						<span style={{ fontWeight: 500 }}>OpenAI API Key</span>
 					</VSCodeTextField>
 					<p
@@ -228,7 +228,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage }: 
 							marginTop: 3,
 							color: "var(--vscode-descriptionForeground)",
 						}}>
-						This key is stored locally and only used to make API requests from this extension.
+						此密钥存储在本地，仅用于从此扩展程序发起API请求。
 						{!apiConfiguration?.openAiNativeApiKey && (
 							<VSCodeLink
 								href="https://platform.openai.com/api-keys"
@@ -250,7 +250,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage }: 
 						style={{ width: "100%" }}
 						type="password"
 						onInput={handleInputChange("deepSeekApiKey")}
-						placeholder="Enter API Key...">
+						placeholder="输入API的密钥...">
 						<span style={{ fontWeight: 500 }}>DeepSeek API Key</span>
 					</VSCodeTextField>
 					<p
@@ -259,7 +259,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage }: 
 							marginTop: 3,
 							color: "var(--vscode-descriptionForeground)",
 						}}>
-						This key is stored locally and only used to make API requests from this extension.
+						此密钥存储在本地，仅用于从此扩展程序发起API请求。
 						{!apiConfiguration?.deepSeekApiKey && (
 							<VSCodeLink
 								href="https://www.deepseek.com/"
@@ -280,7 +280,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage }: 
 						style={{ width: "100%" }}
 						type="password"
 						onInput={handleInputChange("yiApiKey")}
-						placeholder="Enter API Key...">
+						placeholder="输入API的密钥...">
 						<span style={{ fontWeight: 500 }}>Yi API Key</span>
 					</VSCodeTextField>
 					<p
@@ -289,7 +289,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage }: 
 							marginTop: 3,
 							color: "var(--vscode-descriptionForeground)",
 						}}>
-						This key is stored locally and only used to make API requests from this extension.
+						此密钥存储在本地，仅用于从此扩展程序发起API请求。
 						{!apiConfiguration?.yiApiKey && (
 							<VSCodeLink
 								href="https://platform.lingyiwanwu.com/apikeys"
@@ -310,7 +310,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage }: 
 						style={{ width: "100%" }}
 						type="password"
 						onInput={handleInputChange("openRouterApiKey")}
-						placeholder="Enter API Key...">
+						placeholder="输入API的密钥...">
 						<span style={{ fontWeight: 500 }}>OpenRouter API Key</span>
 					</VSCodeTextField>
 					{!apiConfiguration?.openRouterApiKey && (
@@ -327,7 +327,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage }: 
 							marginTop: "5px",
 							color: "var(--vscode-descriptionForeground)",
 						}}>
-						This key is stored locally and only used to make API requests from this extension.{" "}
+						此密钥存储在本地，仅用于从此扩展程序发起API请求。{" "}
 						{/* {!apiConfiguration?.openRouterApiKey && (
 							<span style={{ color: "var(--vscode-charts-green)" }}>
 								(<span style={{ fontWeight: 500 }}>Note:</span> OpenRouter is recommended for high rate
@@ -367,18 +367,18 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage }: 
 						type="password"
 						onInput={handleInputChange("awsSessionToken")}
 						placeholder="Enter Session Token...">
-						<span style={{ fontWeight: 500 }}>AWS Session Token</span>
+						<span style={{ fontWeight: 500 }}>AWS 会话令牌</span>
 					</VSCodeTextField>
 					<div className="dropdown-container">
 						<label htmlFor="aws-region-dropdown">
-							<span style={{ fontWeight: 500 }}>AWS Region</span>
+							<span style={{ fontWeight: 500 }}>AWS 区域</span>
 						</label>
 						<VSCodeDropdown
 							id="aws-region-dropdown"
 							value={apiConfiguration?.awsRegion || ""}
 							style={{ width: "100%" }}
 							onChange={handleInputChange("awsRegion")}>
-							<VSCodeOption value="">Select a region...</VSCodeOption>
+							<VSCodeOption value="">选择一个区域...</VSCodeOption>
 							{/* The user will have to choose a region that supports the model they use, but this shouldn't be a problem since they'd have to request access for it in that region in the first place. */}
 							<VSCodeOption value="us-east-1">us-east-1</VSCodeOption>
 							<VSCodeOption value="us-east-2">us-east-2</VSCodeOption>
@@ -415,7 +415,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage }: 
 								awsUseCrossRegionInference: isChecked,
 							})
 						}}>
-						Use cross-region inference
+						使用跨区域推理
 					</VSCodeCheckbox>
 					<p
 						style={{
@@ -423,9 +423,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage }: 
 							marginTop: "5px",
 							color: "var(--vscode-descriptionForeground)",
 						}}>
-						Authenticate by either providing the keys above or use the default AWS credential providers, i.e.
-						~/.aws/credentials or environment variables. These credentials are only used locally to make API requests
-						from this extension.
+						通过提供上述密钥或使用默认的 AWS 凭证提供程序（即 ~/.aws/credentials 或环境变量）进行身份验证。这些凭证仅在本地使用，用于通过此扩展程序发起 API 请求。
 					</p>
 				</div>
 			)}
@@ -453,7 +451,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage }: 
 							value={apiConfiguration?.vertexRegion || ""}
 							style={{ width: "100%" }}
 							onChange={handleInputChange("vertexRegion")}>
-							<VSCodeOption value="">Select a region...</VSCodeOption>
+							<VSCodeOption value="">选择一个区域...</VSCodeOption>
 							<VSCodeOption value="us-east5">us-east5</VSCodeOption>
 							<VSCodeOption value="us-central1">us-central1</VSCodeOption>
 							<VSCodeOption value="europe-west1">europe-west1</VSCodeOption>
@@ -467,16 +465,16 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage }: 
 							marginTop: "5px",
 							color: "var(--vscode-descriptionForeground)",
 						}}>
-						To use Google Cloud Vertex AI, you need to
+						要使用 Google Cloud Vertex AI，您需要
 						<VSCodeLink
 							href="https://cloud.google.com/vertex-ai/generative-ai/docs/partner-models/use-claude#before_you_begin"
 							style={{ display: "inline", fontSize: "inherit" }}>
-							{"1) create a Google Cloud account › enable the Vertex AI API › enable the desired Claude models,"}
+							{"1) 创建一个 Google Cloud 账户 › 启用 Vertex AI API › 启用所需的 Claude 模型，"}
 						</VSCodeLink>{" "}
 						<VSCodeLink
 							href="https://cloud.google.com/docs/authentication/provide-credentials-adc#google-idp"
 							style={{ display: "inline", fontSize: "inherit" }}>
-							{"2) install the Google Cloud CLI › configure Application Default Credentials."}
+							{"2) 安装 Google Cloud CLI › 配置应用程序默认凭证。"}
 						</VSCodeLink>
 					</p>
 				</div>
@@ -489,7 +487,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage }: 
 						style={{ width: "100%" }}
 						type="password"
 						onInput={handleInputChange("geminiApiKey")}
-						placeholder="Enter API Key...">
+						placeholder="输入API的密钥...">
 						<span style={{ fontWeight: 500 }}>Gemini API Key</span>
 					</VSCodeTextField>
 					<p
@@ -498,7 +496,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage }: 
 							marginTop: 3,
 							color: "var(--vscode-descriptionForeground)",
 						}}>
-						This key is stored locally and only used to make API requests from this extension.
+						此密钥存储在本地，仅用于从此扩展程序发起API请求。
 						{!apiConfiguration?.geminiApiKey && (
 							<VSCodeLink
 								href="https://ai.google.dev/"
@@ -506,7 +504,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage }: 
 									display: "inline",
 									fontSize: "inherit",
 								}}>
-								You can get a Gemini API key by signing up here.
+								您可以通过在此注册获取 Gemini API 密钥。
 							</VSCodeLink>
 						)}
 					</p>
@@ -520,23 +518,23 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage }: 
 						style={{ width: "100%" }}
 						type="url"
 						onInput={handleInputChange("openAiBaseUrl")}
-						placeholder={"Enter base URL..."}>
-						<span style={{ fontWeight: 500 }}>Base URL</span>
+						placeholder={"输入基准URL..."}>
+						<span style={{ fontWeight: 500 }}>基准地址</span>
 					</VSCodeTextField>
 					<VSCodeTextField
 						value={apiConfiguration?.openAiApiKey || ""}
 						style={{ width: "100%" }}
 						type="password"
 						onInput={handleInputChange("openAiApiKey")}
-						placeholder="Enter API Key...">
-						<span style={{ fontWeight: 500 }}>API Key</span>
+						placeholder="输入API的密钥...">
+						<span style={{ fontWeight: 500 }}>API密钥</span>
 					</VSCodeTextField>
 					<VSCodeTextField
 						value={apiConfiguration?.openAiModelId || ""}
 						style={{ width: "100%" }}
 						onInput={handleInputChange("openAiModelId")}
-						placeholder={"Enter Model ID..."}>
-						<span style={{ fontWeight: 500 }}>Model ID</span>
+						placeholder={"输入模型ID..."}>
+						<span style={{ fontWeight: 500 }}>模型ID</span>
 					</VSCodeTextField>
 					<VSCodeCheckbox
 						checked={azureApiVersionSelected}
@@ -589,7 +587,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage }: 
 						style={{ width: "100%" }}
 						onInput={handleInputChange("lmStudioModelId")}
 						placeholder={"e.g. meta-llama-3.1-8b-instruct"}>
-						<span style={{ fontWeight: 500 }}>Model ID</span>
+						<span style={{ fontWeight: 500 }}>模型ID</span>
 					</VSCodeTextField>
 					{lmStudioModels.length > 0 && (
 						<VSCodeRadioGroup
@@ -655,7 +653,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage }: 
 						style={{ width: "100%" }}
 						onInput={handleInputChange("ollamaModelId")}
 						placeholder={"e.g. llama3.1"}>
-						<span style={{ fontWeight: 500 }}>Model ID</span>
+						<span style={{ fontWeight: 500 }}>模型ID</span>
 					</VSCodeTextField>
 					{ollamaModels.length > 0 && (
 						<VSCodeRadioGroup
